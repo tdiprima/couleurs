@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Picker</title>
+  <!-- <link href="../index.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/gh/taufik-nurrohman/color-picker/index.min.css"/>
+</head>
+<body>
+
+<p><input type="text" value="#ff0"></p>
+
+<!-- <script src="../index.min.js"></script> -->
+<script src="http://cdn.jsdelivr.net/gh/taufik-nurrohman/color-picker/index.min.js"></script>
+
+<script>
+  // Initialization
+  const picker = new CP(document.querySelector('input'));
+  let init = true;
+  picker.on('change', function (r, g, b, a) {
+    if (init) {
+      init = false; // Update the state here!
+      return;
+    }
+    console.log([r, g, b, a]);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+#27374c
+
+https://hype4.com/
+
+rgb(39, 55, 76)
+
+{
+  color: var(--base-color);
+  font-family: Euclid;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+
+ {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --base-color: #27374c;
+  --base-light-color: rgba(39,55,76,0.5);
+  --containerWidth: 1180px;
+  --basicPadding: 20px 30px;
+}
+
+https://mycolor.space/?hex=%2327374C&sub=1

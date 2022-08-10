@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RGB to Hex: Understanding the Major Web Color Codes</title>
+  <!-- https://www.developintelligence.com/blog/2017/02/rgb-to-hex-understanding-the-major-web-color-codes/ -->
+  <style>
+      body {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: x-large;
+      }
+  </style>
+</head>
+
+<body>
+  <main class="content  units av-content-small alpha  av-blog-meta-author-disabled av-blog-meta-date-disabled"
+    role="main" itemscope="itemscope" itemtype="https://schema.org/Blog">
+    <h2 class="post-title entry-title" itemprop="headline"> <a rel="bookmark"
+        title="RGB to Hex: Understanding the Major Web Color Codes">RGB to Hex: Understanding the Major Web Color
+        Codes<span class="post-format-icon minor-meta"></span> </a></h2>
+    
+    <p><h3><a href="https://blog.hubspot.com/marketing/color-theory-design" target="_blank">The Designer's Guide to Color Theory</a></h3></p>
+    
+    <article
+      class="post-entry post-entry-type-standard post-entry-8515 post-loop-1 post-parity-odd post-entry-last single-big with-slider post-8515 post type-post status-publish format-standard has-post-thumbnail hentry category-appendto_blogs category-color category-css-2 tag-color tag-hex tag-rgb"
+      itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
+      <div class="ff sdsdds entry-content-wrapper clearfix standard-content">
+        <header class="entry-content-header"><span class="av-vertical-delimiter"></span>
+          <div class="entry-content" itemprop="text">
+            <div class="bialty-container">
+              <p>Since the earliest days of web development, there have been ways to specify colors in backgrounds,
+                borders, fonts, and other elements. Some people use supported color keywords, while other people use a
+                more specific color system such as HSL (hue, saturation, lightness). However, today we will be talking
+                about the two most popular color naming conventions, <em>RGB color codes</em> and <em>hexadecimal (hex)
+                  color codes</em>.</p>
+              <h3>RGB Color Codes</h3>
+              <p>RGB color codes, sometimes referred to as RGBA color codes when they include an additional value for an
+                alpha channel, are one of the most popular ways to define colors in webpages. They are written in the
+                following way:</p>
+              <pre><code>color: rgb(0, 0, 0);       /* black */
+color: rgb(255, 255, 255); /* white */
+</code></pre>
+              <p>RGB gets its name from the primary colors; red, green, and blue. In traditional color theory, all other
+                colors can be derived from combinations of these three, and it was thought that these three colors could
+                not be formed by a mix of any other colors.</p>
+              <p><img alt="RGB Primary Color Wheel"
+                  nitro-lazy-src="img/rgb-primary-color-wheel.png"
+                  class=" lazyloaded" nitro-lazy-empty="" id="NjA1OjExNw==-1"
+                  src="img/rgb-primary-color-wheel.png"></p>
+              <h3>Hex Color Codes</h3>
+              <p>Hex color codes actually use the same principle as RGB color codes, as they both define colors using
+                the RGB color mode. They are written in a slightly different way:</p>
+              <pre><code>color: #000000; /* black */
+color: #FFFFFF; /* white */
+</code></pre>
+              <p>While the choice between which of these color naming conventions to use comes down to a matter of
+                personal preference, there are several advantages to using hex color codes:</p>
+              <ul>
+                <li>They are more compact, and therefore are better for minimized code. Hex color codes can also become
+                  even more compact by using only three digits for some colors, rather than the full six digits.</li>
+                <li>They improve the load time of a web page slightly. Computers handle binary digits, and one
+                  hexadecimal digit can easily be converted into four binary digits, while decimal digits take longer to
+                  convert.</li>
+                <li>They are easier to copy over from various programs that contain the color palette to be used, as
+                  they are written as one value rather than three separate values, and they are more likely to be used
+                  in color schemes being referenced since they have become the standard for use in HTML and CSS code.
+                </li>
+              </ul>
+              <p>While none of these are likely to make a significant impact on the development process, you may find
+                yourself wanting to switch to hex color codes at some point – so, how does one switch from an RGB color
+                code to a hexadecimal color code?</p>
+              <h3>Converting RGB to Hex Color Codes</h3>
+              <p>RGB color code values are based on the number system we are most familiar with, the decimal number
+                system. The decimal number system is a Base-10 system, meaning there are 10 unique characters used to
+                define the numbers. The 10 characters used are the numbers 0 – 9.</p>
+              <p>Hex color code values, in comparison, are based on the hexadecimal number system. The hexadecimal
+                number system is a Base-16 system, meaning there are 16 unique characters used to define the numbers.
+                The 16 characters used are the numbers 0 – 9, and the letters A – F.</p>
+              <blockquote>
+                <p><strong>Note:</strong> This also explains why the highest value possible in the RGB system is 255. By
+                  using a hexadecimal, or 16-bit number system, the maximum number of colors that can be displayed at
+                  any one time is 16 x 16, or 256 colors. These 256 colors are represented as the values 0 – 255.</p>
+              </blockquote>
+              <p>Counting is done the same way in both systems. The first number is 0, and you count all the way up to
+                the last digit. For the decimal number system, this digit is 9. For the hexadecimal number system, this
+                digit is F. Sometimes, a leading 0 is written in front of these values. Once you reach the last digit,
+                you start the count over, this time with your leading digit as the next one in the system (which is 1,
+                for both the decimal and hexadecimal number systems). Below is a chart that helps to show the difference
+                in the two number systems:</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th align="center">Decimal</th>
+                    <th align="center">0</th>
+                    <th align="center">1</th>
+                    <th align="center">2</th>
+                    <th align="center">3</th>
+                    <th align="center">4</th>
+                    <th align="center">5</th>
+                    <th align="center">6</th>
+                    <th align="center">7</th>
+                    <th align="center">8</th>
+                    <th align="center">9</th>
+                    <th align="center">10</th>
+                    <th align="center">11</th>
+                    <th align="center">12</th>
+                    <th align="center">13</th>
+                    <th align="center">14</th>
+                    <th align="center">15</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td align="center">Hexadecimal</td>
+                    <td align="center">0</td>
+                    <td align="center">1</td>
+                    <td align="center">2</td>
+                    <td align="center">3</td>
+                    <td align="center">4</td>
+                    <td align="center">5</td>
+                    <td align="center">6</td>
+                    <td align="center">7</td>
+                    <td align="center">8</td>
+                    <td align="center">9</td>
+                    <td align="center">A</td>
+                    <td align="center">B</td>
+                    <td align="center">C</td>
+                    <td align="center">D</td>
+                    <td align="center">E</td>
+                    <td align="center">F</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>In order to convert an RGB color code to a hex color code, you will need to convert each of the values
+                individually. Let's look at the color <em>crimson</em> as an example. The RGB color code for crimson is
+                rgb(220, 20, 60).</p>
+              <p><img alt="Crimson: rgb(220, 20, 60)"
+                  nitro-lazy-src="img/crimson-rgb-color-code.png"
+                  class=" lazyloaded" nitro-lazy-empty="" id="NjY4OjExOA==-1"
+                  src="img/crimson-rgb-color-code.png"></p>
+              <h4>First Value</h4>
+              <ol>
+                <li>Take the first number, <strong>220</strong>, and divide by 16. 220 / 16 = 13.75, which means that
+                  the first digit of the 6-digit hex color code is 13, or <strong>D</strong>.</li>
+                <li>Take the remainder of the first digit, <strong>0.75</strong>, and multiply by 16. 0.75 (16) = 12,
+                  which means that the second digit of the 6-digit hex color code is 12, or <strong>C</strong>.</li>
+              </ol>
+              <p>So far, we have <strong>#DC____</strong>.</p>
+              <h4>Second Value</h4>
+              <ol>
+                <li>Take the second number, <strong>20</strong>, and divide by 16. 20 / 16 = 1.25, which means that the
+                  third digit of the 6-digit hex color code is <strong>1</strong>.</li>
+                <li>Take the remainder of the first digit, <strong>0.25</strong>, and multiply by 16. 0.25 (16) = 4,
+                  which means that the fourth digit of the 6-digit hex color code is <strong>4</strong>.</li>
+              </ol>
+              <p>Adding to what we had already, we now have <strong>#DC14__</strong>.</p>
+              <h4>Third Value</h4>
+              <ol>
+                <li>Take the third number, <strong>60</strong>, and divide by 16. 60 / 16 = 3.75, which means that the
+                  fifth digit of the 6-digit hex color code is <strong>3</strong>.</li>
+                <li>Take the remainder of the first digit, <strong>0.75</strong>, and multiply by 16. 0.75 (16) = 12,
+                  which means that the sixth digit of the 6-digit hex color code is 12, or <strong>C</strong>.</li>
+              </ol>
+              <p>Finally, we have our total value of <strong>#DC143C</strong>.</p>
+              <p><img alt="Crimson: #DC143C"
+                  nitro-lazy-src="img/crimson-hex-color-code.png"
+                  class=" lazyloaded" nitro-lazy-empty="" id="Njg3OjEwOQ==-1"
+                  src="img/crimson-hex-color-code.png"></p>
+              <h3>Converting Hex to RGB Color Codes</h3>
+              <p>Despite the benefits of using hex color codes, there are times you might want to use an RGB color code
+                instead. Some of the reasons you may choose to use an RGB color code, aside from personal preference,
+                are:</p>
+              <ul>
+                <li>You may need to add an alpha channel to the color itself, rather than using a separate CSS property
+                  for opacity.</li>
+                <li>You may expect people to print your web page, and printers understand RGB values better than they
+                  understand hexadecimal values.</li>
+                <li>You may need to manipulate colors with JavaScript, which becomes easier to do if you are using RGB
+                  color values.</li>
+              </ul>
+              <p>Converting a hex color code to an RGB color code is actually a little more simple, as there is less
+                math involved. This time, let's look at the color <em>orchid</em> as an example. The hex color code for
+                orchid is #DA70D6.</p>
+              <p><img alt="Orchid: #DA70D6"
+                  nitro-lazy-src="img/orchid-hex-color-code.png"
+                  class=" lazyloaded" nitro-lazy-empty="" id="Njk2OjEwNw==-1"
+                  src="img/orchid-hex-color-code.png"></p>
+              <h4>First Value</h4>
+              <ol>
+                <li>Take the first digit, <strong>D</strong>, and convert it into decimal. The result is 13.</li>
+                <li>Multiply 13 by 16. 13 (16) = 208. This is the <em>partial value</em>.</li>
+                <li>Take the second digit, <strong>A</strong>, and convert it into decimal. The result is 10.</li>
+                <li>Add the partial value to the second digit. 208 + 10 = 218.</li>
+              </ol>
+              <p>This means that <strong>218</strong> is the red value.</p>
+              <h4>Second Value</h4>
+              <ol>
+                <li>Take the third digit, <strong>7</strong>, and convert it into decimal. The result is 7.</li>
+                <li>Multiply 7 by 16. 7 (16) = 112. This is the <em>partial value</em>.</li>
+                <li>Take the fourth digit, <strong>0</strong>, and convert it into decimal. The result is 0.</li>
+                <li>Add the partial value to the second digit. 112 + 0 = 112.</li>
+              </ol>
+              <p>This means that <strong>112</strong> is the green value.</p>
+              <h4>Third Value</h4>
+              <ol>
+                <li>Take the fifth digit, <strong>D</strong>, and convert it into decimal. The result is 13.</li>
+                <li>Multiply 13 by 16. 13 (16) = 208. This is the <em>partial value</em>.</li>
+                <li>Take the sixth digit, <strong>6</strong>, and convert it into decimal. The result is 6.</li>
+                <li>Add the partial value to the second digit. 208 + 6 = 214.</li>
+              </ol>
+              <p>This means that <strong>214</strong> is the blue value, giving us our final result of <strong>rgb(218,
+                  112, 214)</strong>.</p>
+              <p><img alt="Orchid: rgb(218, 112, 214)"
+                  nitro-lazy-src="img/orchid-rgb-color-code.png"
+                  class=" lazyloaded" nitro-lazy-empty="" id="NzIxOjExOA==-1"
+                  src="img/orchid-rgb-color-code.png"></p>
+              <h3>The Color Palette and You</h3>
+              <p>No matter which method you prefer, both RGB and hex color codes are based upon the blending and
+                intensity of three colors to create many different colors. However, colors on the web blend together
+                differently than you might expect if you were to mix different color paint together.</p>
+              <pre><code>Green + Blue = Cyan
+Red + Blue = Magenta
+Red + Green = Yellow
+</code></pre>
+              <p>You might recognize these colors from another way of defining color in design, known as CMYK, which is
+                used for printing. Some people prefer to think of the color palette not as the combination of RGB values
+                to create CMYK values, but the combination of the CMYK values to create RGB values.</p>
+              <pre><code>Magenta + Yellow = Red
+Cyan + Yellow = Green
+Cyan + Magenta = Blue
+Cyan + Magenta + Yellow = Key (Black)
+</code></pre>
+              <p>Knowing this, it becomes easier to understand what the individual RGB values control and how exactly to
+                manipulate them to get the colors you are looking for.</p>
+              <h4>Understanding the Sliding Scale</h4>
+              <p>The sliding scale of color is what most representations of color palettes use in place of a color
+                wheel. It goes through all the colors of the rainbow, starting at red, and continuing on through orange,
+                yellow, green, blue, purple, and pink until it returns to red.</p>
+                <!-- img/web-safe-color-slider.gif -->
+              <p><img alt="Color Sliding Scale"
+                  nitro-lazy-src="img/color-picker.png"
+                  class=" lazyloaded" nitro-lazy-empty="" id="NzM3OjExMQ==-1"
+                  src="img/color-picker.png"></p>
+              <p>The <em>red</em> RGB value is responsible for warm color tones, such as red, pink, and orange. The
+                higher this value is, the warmer the color will be. Red is the first color encountered on the sliding
+                scale, with a value of <em>rgb(255, 0, 0)</em> or <em>#FF0000</em>.</p>
+              <p>As you work your way along the scale, more of the <em>green</em> RGB value is added to create orange,
+                then yellow. <em>Yellow</em>, with a value of <em>rgb(255, 255, 0)</em> or <em>#FFFF00</em>, is the
+                color that red and green have in common. From that point, the red value is decreased to give us
+                different shades of green.</p>
+              <p>Eventually you will reach green on the sliding scale, with a value of <em>rgb(0, 255, 0)</em> or
+                <em>#00FF00</em>. From there, the <em>blue</em> RGB value is added to eventually create cyan.
+                <em>Cyan</em>, with a value of <em>rgb(0, 255, 255)</em> or <em>#00FFFF</em>, is the color that green
+                and blue have in common. Similar to before, the green value is then decreased to create different shades
+                of blue.</p>
+              <p>Towards the end of the sliding scale, you can start adding the <em>red</em> RGB value back in to create
+                colors such as purple and pink. Once you reach <em>Magenta</em>, with a value of <em>rgb(255, 00,
+                  255)</em> or <em>#FF00FF</em>, the blue value is then decreased to eventually reach the original red
+                color you started with.</p>
+              <h4>Variations in Individual Colors</h4>
+              <p>Obviously, not all colors fit perfectly onto the sliding scale. By using the sliding scale, you will
+                always be given very vibrant versions of colors – but sometimes, you need a lighter or darker shade of
+                one of those colors to get the kind of color tone you're looking for.</p>
+                <!-- img/web-safe-color-palette.gif -->
+                <p><h3>Web Safe Color Palette</h3></p>
+              <p><img alt="Web Safe Color Palette"
+                  nitro-lazy-src="https://www.colortools.net/img25/websafe_color_chart.gif"
+                  class=" lazyloaded" nitro-lazy-empty="" id="NzQ0OjExNQ==-1"
+                  src="https://www.colortools.net/img25/websafe_color_chart.gif"></p>
+              <p>Generally speaking, the higher the numbers, the lighter the color, and the lower the numbers, the
+                darker the color. If you want to stick to the same shade of a color you have, this makes adjusting the
+                brightness simple:</p>
+              <ol>
+                <li>Identify which color you are using out of the main choices on the sliding scale – red, green, blue,
+                  or a combination of two of them.</li>
+                <li>If you would like to make the color lighter, adjust the values that are not being used – so for
+                  example, adjust green and blue if your color is red, or adjust only red if your color is cyan. The
+                  values will need to be higher numbers in order to lighten the color.</li>
+                <li>If you would like the make the color darker, adjust only the values that are being used – so for
+                  example, adjust only red if your color is red, or adjust green and blue if your color is cyan. The
+                  values will need to be lower numbers in order to darken the color.</li>
+              </ol>
+              <blockquote>
+                <p><strong>Note:</strong> If you are changing two values, the values will need to be adjusted evenly in
+                  order to make sure you keep the same color tone. That means if you increase or decrease one of the
+                  values by 100, you will need to also increase or decrease the other value by 100, regardless of if
+                  these numbers had the same starting value.</p>
+              </blockquote>
+              <h3>That's a Wrap!</h3>
+              <p>In conclusion, both RGB and hexadecimal values can be used to display colors on a web page. There is no
+                right or wrong way to write color values, but each one has their advantages and disadvantages depending
+                on the task you are trying to accomplish. Also, regardless of what color naming convention you use, you
+                can easily manipulate your color tone by adjusting the values you're using.</p>
+              <p>There isn't a single technique that can give you a code for each and every color. Sometimes you need a
+                more brilliant tone, or a cloudier one, that can't be obtained by simply changing one or two values.
+                Don't be afraid to adjust all three values – the results might turn out better than what you were
+                originally aiming for.</p>
+              <p>Now, go out and explore the color in your world!</p>
+            </div>
+          </div>
+          <span class="post-meta-infos">
+              <time class="date-container minor-meta updated">February 24, 2017</time>
+          </span>
+    </article>
+  </main>
+  <p>&nbsp;</p>
+</body>
+
+</html>
