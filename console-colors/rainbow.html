@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="HTML Tidy for HTML5 for Apple macOS version 5.8.0" name="generator">
+  <title>Rainbow Message</title>
+  <!-- https://stackoverflow.com/questions/44699271/how-to-display-rainbow-message-in-console-log -->
+</head>
+<body>
+<input id="input" name="input" type="text">
+<script>
+  // FILTERS
+  console.log(
+    "%cF%cI%cL%cT%cE%cR%cS",
+    "color: red;",
+    "color: orange;",
+    "color: yellow;",
+    "color: lime;",
+    "color: blue;",
+    "color: indigo;",
+    "color: violet;",
+  );
+
+  // hello world
+  console.log(
+    "%ch%ce%cl%cl%co%c %cw%co%cr%cl%cd",
+    "color: #144143;",
+    "color: #40C71F;",
+    "color: #5B7487;",
+    "color: #E3E226;",
+    "color: #6A8693;",
+    "color: #EC8802;",
+    "color: #9D44DE;",
+    "color: #1F1C4D;",
+    "color: #92812D;",
+    "color: #7A412C;",
+    "color: #73936F;",
+  );
+
+  let input = document.getElementById("input");
+
+  /**
+   * blur event
+   */
+  input.addEventListener("blur", () => {
+    let inputValue = input.value;
+    let inputSplitted = inputValue.split("");
+    let inputLength = inputSplitted.length;
+
+    let newLog = "";
+    let colors = "";
+
+    for (let i = 0; i < inputLength; i++) {
+      // Chaque lettre est contenue dans inputSplitted[i]
+      newLog += `%c${inputSplitted[i]}`;
+      colors += `||color: ${randomColor()};`;
+    }
+    newLog += "";
+
+    let log = newLog + colors;
+    let arr = log.split("||");
+
+    console.log(...arr);
+  });
+
+  /**
+   * randomColor
+   * @return {string}
+   */
+  function randomColor() {
+    let letters = "0123456789ABCDEF";
+    let color = "#";
+
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+</script>
+</body>
+</html>
