@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>interpolateRgb</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <style>
+    .myDivs {
+      width: 40px;
+      height: 40px;
+      margin-right: 5px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+<script>
+  let colorInterpolator = d3.interpolateRgb('red', 'green');
+
+  let steps = 7;
+
+  let colorArray = d3.range(0, 1 + 1 / steps, 1 / (steps - 1)).map(d => {
+    return colorInterpolator(d);
+  });
+  console.log(colorArray);
+
+  d3.select('body')
+    .selectAll(null)
+    .data(colorArray)
+    .enter()
+    .append('div')
+    .attr('class', 'myDivs')
+    .style('background-color', String);
+</script>
+</body>
+</html>
