@@ -1,0 +1,27 @@
+.NSCLC-Lapidic {
+    color: rgb(255, 0, 0)
+}
+
+.NSCLC-Benign {
+    color: rgb(255, 127, 0)
+}
+
+.NSCLC-Adeno {
+    color: rgb(255, 255, 0)
+}
+
+.NSCLC-Solid {
+    color: rgb(0, 255, 0)
+}
+
+.NSCLC-Acinar {
+    color: rgb(0, 0, 255)
+}
+
+.NSCLC-Micropapillary {
+    color: rgb(255, 255, 255)
+}
+
+.NSCLC-Papillary {
+    color: rgb(139, 0, 255)
+}
