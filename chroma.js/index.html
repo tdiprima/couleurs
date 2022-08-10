@@ -16,22 +16,26 @@
 <body>
 See console -->
 <script>
-  let a = chroma('#D4F880').darken().hex();
-  console.log(`\n%c${a}`, `color: ${a};`);
+  let result;
+  result = chroma('#D4F880').darken().hex();
+  console.log(`\n%c${result}`, `color: ${result};`);
 
-  let b = chroma('pink').darken().saturate(2).hex();
-  console.log(`\n%c${b}`, `color: ${b};`);
+  result = chroma('pink').darken().saturate(2).hex();
+  console.log(`\n%c${result}`, `color: ${result};`);
   console.log();
 
-  let c = chroma.scale(['#fafa6e', '#2A4858']).mode('lch').colors(6);
-  c.forEach(element => console.log(`%c${element}`, `color: ${element};`));
+  result = chroma.scale(['#fafa6e', '#2A4858']).mode('lch').colors(6);
+  result.forEach(element => console.log(`%c${element}`, `color: ${element};`));
   console.log();
 
-  let d = chroma('hotpink');
-  console.log(d["_rgb"]);
+  result = chroma('hotpink');
+  console.log(result["_rgb"]);
 
-  let e = chroma('#ff3399');
-  console.log(e["_rgb"]);
+  result = chroma('#ff3399');
+  console.log(result["_rgb"]);
+
+  result = chroma(0xffcc00);
+  console.log(result["_rgb"]);
 </script>
 </body>
 </html>
