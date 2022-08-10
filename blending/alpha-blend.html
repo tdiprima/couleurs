@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>alpha blending</title>
+  <!-- https://stackoverflow.com/questions/26200800/blending-two-images-with-html5-canvas#26202020 -->
+  <script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<p>Like, what the h311 happens? (open console)</p>
+<p>
+  <canvas height="360" id="divA" style="border:1px solid blueviolet;" width="360">
+  </canvas>
+  <span></span>
+  <span></span>
+</p>
+<div id="coords"></div>
+<script>
+  let canvas = document.querySelector('canvas')
+  let context = canvas.getContext('2d')
+  console.log(canvas.getBoundingClientRect())
+
+  context.fillStyle = 'rgba(0, 255, 255, 0.5)'
+  context.fillRect(10, 10, 200, 200)
+  context.fillRect(100, 100, 200, 200)
+
+  // a square
+  logAlpha(context, 11, 11)
+
+  // overlap area
+  let centerX = canvas.width / 2
+  let centerY = canvas.height / 2
+  logAlpha(context, centerX, centerY)
+
+  // check that the final alpha is right (==255)
+  function logAlpha(ctx, x, y) {
+    const imDt = ctx.getImageData(x, y, 1, 1).data
+    if (!(imDt[0] || imDt[1] || imDt[2])) console.log('null point. CORS issue ?')
+    console.log(' point at (' + x + ',' + y + ') has an alpha of ' + imDt[3])
+  }
+
+  /************ MOUSE MOVE ************/
+  // https://stackoverflow.com/questions/3011418/onmousemove-get-mouse-position#3011466
+  // get position on mouse move
+  $('#divA').mousemove(function (e) {
+    const pageCoords = '( ' + e.pageX + ', ' + e.pageY + ' )'
+    const clientCoords = '( ' + e.clientX + ', ' + e.clientY + ' )'
+    $('span:first').text('( e.pageX, e.pageY ) - ' + pageCoords)
+    $('span:last').text('( e.clientX, e.clientY ) - ' + clientCoords)
+  })
+
+  // https://www.html5canvastutorials.com/advanced/html5-canvas-mouse-coordinates/
+  // get canvas coordinates on mouse move
+  /*
+   To get the mouse coordinates relative to an HTML5 Canvas, we can create a getMousePos() method which returns
+   the mouse coordinates based on the position of the client mouse and the position of the canvas obtained from
+   the getBoundingClientRect() method of the window object.
+   */
+  let div = document.getElementById('coords')
+
+  function writeMessage(canvas, message) {
+    /*** WRITES INSIDE THE CANVAS ***/
+    // const context = canvas.getContext('2d')
+    // context.clearRect(0, 0, canvas.width, canvas.height)
+    // context.font = '18pt Calibri'
+    // context.fillStyle = 'black'
+    // context.fillText(message, 10, 25)
+    /*** WRITES TO DIV ***/
+    div.innerHTML = message
+  }
+
+  function getMousePos(canvas, evt) {
+    const rect = canvas.getBoundingClientRect()
+    return {
+      x: evt.clientX - rect.left,
+      y: evt.clientY - rect.top
+    }
+  }
+
+  canvas.addEventListener('mousemove', function (evt) {
+    const mousePos = getMousePos(canvas, evt)
+    const message = 'Mouse position: ' + Math.round(mousePos.x) + ',' + Math.round(mousePos.y)
+    writeMessage(canvas, message)
+  }, false)
+
+</script>
+</body>
+</html>

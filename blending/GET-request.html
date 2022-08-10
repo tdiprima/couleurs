@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Interact</title>
+  <style>
+    .button {
+      background-color: #e7e7e7;
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+<h2>Page is refreshed each time</h2>
+<!-- http://127.0.0.1:5500/interact.html?normal -->
+<canvas id="canvas"></canvas>
+<br>
+<script>
+  let modes = ['source-over', 'normal', 'dissolve', 'darken', 'multiply', 'color-burn',
+    'linear-burn', 'darker', 'lighten', 'screen', 'color-dodge', 'linear-dodge',
+    'lighter', 'overlay', 'soft-light', 'hard-light', 'vivid-light', 'linear-light',
+    'pin-light', 'hard-mix', 'difference', 'exclusion', 'subtract', 'divide',
+    'hue', 'saturation', 'color', 'luminosity']
+
+  let canvas = document.getElementById("canvas")
+  let ctx = canvas.getContext("2d")
+
+  // let winMin = Math.min(window.innerWidth, window.innerHeight)
+  // canvas.width = winMin
+  // canvas.height = winMin
+  canvas.width = 400
+  canvas.height = 400
+
+  let param = location.search.slice(1)
+
+  for (let i = 0; i < modes.length; i++) {
+    let el = document.createElement('button')
+    el.type = 'button'
+    el.id = modes[i].replace('-', '_')
+    el.value = modes[i]
+    el.innerHTML = modes[i]
+    el.classList.add('button')
+    document.body.appendChild(el)
+
+    if (i % 6 === 0) {
+      document.body.appendChild(document.createElement('br'))
+    }
+
+    el.addEventListener('click', function () {
+      if (window.location.search) {
+        window.location = (window.location.href).replace(param, el.value)
+      } else {
+        window.location = window.location.href + '?' + el.value
+      }
+    })
+  }
+
+  ctx.globalCompositeOperation = typeof param !== 'undefined' ? param : 'source-over'
+
+  //magenta
+  ctx.fillStyle = "rgb(255,0,255)"
+  ctx.beginPath()
+  ctx.arc(100, 100, 100, 0, Math.PI * 2, true)
+  ctx.closePath()
+  ctx.fill()
+
+  //cyan
+  ctx.fillStyle = "rgb(0,255,255)"
+  ctx.beginPath()
+  ctx.arc(200, 100, 100, 0, Math.PI * 2, true)
+  ctx.closePath()
+  ctx.fill()
+
+  //yellow
+  ctx.fillStyle = "rgb(255,255,0)"
+  ctx.beginPath()
+  ctx.arc(150, 200, 100, 0, Math.PI * 2, true)
+  ctx.closePath()
+  ctx.fill()
+
+</script>
+</body>
+
+</html>

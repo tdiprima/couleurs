@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Global Composite Operation</title>
+  <!-- https://youtu.be/BmEAJbAihFU -->
+  <style>
+    #canvas1 {
+      position: absolute;
+      border: 1px solid black;
+      width: 100%;
+      height: 100%;
+      background: black;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+<canvas id="canvas1"></canvas>
+<script>
+  // 0 = black; 255 = white; higher numbers are lighter
+
+  // luma = brightness; black & white portion of the image
+  // chroma = the color information in the image
+
+  const canvas = document.getElementById('canvas1')
+  const ctx = canvas.getContext('2d')
+  console.log('defaults', ctx)
+  canvas.width = window.innerWidth
+  canvas.height = window.innerHeight
+
+  // "destination"; existing content
+  // ctx.fillStyle = 'rgba(0, 0, 255, .9)' // blue
+  ctx.fillStyle = 'rgba(255, 255, 0, .9)' // yellow
+  ctx.fillRect(200, 200, 300, 300)
+
+  // how they interact with each other
+  /*
+  DARKEN
+  'darken' retains darkest pixels from both layers
+  'multiply' pixels from top layer are multiplied with corresponding pixels from bottom layer
+  'color-burn'
+   */
+
+  /*
+  LIGHTEN
+  'lighten' retains lightest pixels
+  'screen' opposite of multiply; lighter intersection
+  'color-dodge'
+  'lighter' colors overlap a different color
+   */
+
+  /*
+  CONTRAST
+  'overlay' make light lighter and dark darker; like increase contrast
+  'soft-light' softer version of hard-light
+  'hard-light'
+   */
+
+  // INVERSION
+  ctx.globalCompositeOperation = 'difference' // subtracts bottom layer from top layer, or vice-versa, to always get positive value
+  // 'exclusion' same thing, but with lower contrast
+
+  /*
+  COMPONENT
+  'hue' preserves the luma & chroma of bottom while adopting hue of top layer
+  'saturation' preserves the luma & hue of bottom, while adopting chroma of top
+  'color' preserves luma of bottom, hue & chroma of top layer
+  'luminosity' preserves hue & chroma of bottom, luma of top layer
+   */
+
+  /*
+  SHAPE
+  'source-over' default; new shape drawn over existing
+  'source-in' drawn only where new shape and original shape overlap; everything else transparent
+  'source-out' new shape drawn only where it doesn't overlap
+  'source-atop' draw only that part of new shape that overlaps
+  'destination-over' draw new shape behind existing
+  'destination-in' only draw the area where both shapes overlap
+  'destination-out' only draw bg content where it doesn't overlap with new content
+  'destination-atop' only draws existing canvas content where it overlaps the new shape; new shape drawn behind it
+  'copy' only shows the new shape; top layer
+  'xor' shapes are drawn transparent where they overlap
+   */
+
+  // "source"; new content
+  ctx.fillStyle = 'rgba(255, 0, 0, .9)'
+  ctx.beginPath()
+  ctx.arc(500, 500, 150, 0, Math.PI * 2)
+  ctx.fill()
+</script>
+</body>
+</html>
