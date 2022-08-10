@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>chroma.js</title>
+  <!-- https://gka.github.io/chroma.js/ -->
+  <script src="chroma.min.js"></script>
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+  </style>
+</head>
+<body>
+See console -->
+<script>
+  let a = chroma('#D4F880').darken().hex();
+  console.log(`\n%c${a}`, `color: ${a};`);
+
+  let b = chroma('pink').darken().saturate(2).hex();
+  console.log(`\n%c${b}`, `color: ${b};`);
+  console.log();
+
+  let c = chroma.scale(['#fafa6e', '#2A4858']).mode('lch').colors(6);
+  c.forEach(element => console.log(`%c${element}`, `color: ${element};`));
+  console.log();
+
+  let d = chroma('hotpink');
+  console.log(d["_rgb"]);
+
+  let e = chroma('#ff3399');
+  console.log(e["_rgb"]);
+</script>
+</body>
+</html>
