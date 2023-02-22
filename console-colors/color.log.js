@@ -11,9 +11,6 @@ console.log("%cDark purple", "color: #410093");
 
 console.log("%cDarkSeaGreen", "color: darkseagreen;");
 
-console.log('%cDeepPink', 'color: deeppink');
-console.log('%cHello World!', 'color: darkseagreen;');
-
 console.log(String.fromCodePoint(0x1f601));
 
 let styles = [
@@ -37,7 +34,6 @@ console.log('%c%s', styles1, message);
 console.log('\x1b[36m%s\x1b[0m', 'I am cyan');
 console.log('\x1b[33m%s\x1b[0m', 'yellow');
 
-console.log('%cDeepPink', 'color: deeppink');
 console.log('%c Oh my heavens! ', 'background: #222; color: #bada55');
 console.log('%cHi there!', 'background: #444; color: #bada55; padding: 2px; border-radius:2px');
 console.log('%cHello, ' + '%cWorld', 'color: red;', 'color: blue;');
@@ -55,3 +51,16 @@ let myStyles = [
   'border-radius:5px'
 ].join(';');
 console.log('%cMulti-Viewer', myStyles);
+
+// PAPYRUS
+let style1 = [
+  'color: powderBlue',
+  'text-shadow: 2px 2px purple',
+  'background: plum',
+  'font-size: 3em',
+  'border: 1px solid purple',
+  'padding: 20px',
+  'font-family: fantasy'
+].join(';');
+
+console.log('%cWelcome Home!', style1);
