@@ -23,7 +23,7 @@ Here's a **general approach** to achieve color shifting from blue to green:
 4. Retrieve the resulting RGB values and represent them as a hex color.
 
 
-## JavaScript
+## To Green
 
 Certainly! Here's an example code snippet in JavaScript that demonstrates color shifting from blue to green:
 
@@ -125,6 +125,49 @@ console.log(shiftedGreenHexColor);
 The **`shiftColorToGreen()`** function takes a blue hex color as input, converts it to the HSL color space, adjusts the hue to the desired green hue (120), converts it back to the RGB color space, and returns the resulting green hex color.
 
 You can run this code in a JavaScript environment like a web browser's developer console or Node.js to see the transformed green hex color.
+
+## To Red
+
+Certainly! Here's the modified code snippet that color-shifts the provided hex colors to shades of red:
+
+```javascript
+// Function to shift color to red
+function shiftColorToRed(hexColor) {
+  // Remove the "#" from the beginning of the hex color
+  let color = hexColor.substring(1);
+
+  // Extract the RGB values from the hex color
+  let r = parseInt(color.substring(0, 2), 16);
+  let g = parseInt(color.substring(2, 4), 16);
+  let b = parseInt(color.substring(4, 6), 16);
+
+  // Convert RGB to HSL
+  let [h, s, l] = rgbToHsl(r, g, b);
+
+  // Set the desired red hue
+  let redHue = 0; // 0 represents red in the HSL color space
+
+  // Convert the red hue to RGB
+  let [shiftedR, shiftedG, shiftedB] = hslToRgb(redHue, s, l);
+
+  // Convert the shifted RGB values to hex color
+  let shiftedHexColor = `#${shiftedR.toString(16)}${shiftedG.toString(16)}${shiftedB.toString(16)}`;
+
+  return shiftedHexColor;
+}
+
+// Example usage
+let blueHexColor = "#156289";
+let darkBlueHexColor = "#072534";
+
+let shiftedRedHexColor1 = shiftColorToRed(blueHexColor);
+let shiftedRedHexColor2 = shiftColorToRed(darkBlueHexColor);
+
+console.log(shiftedRedHexColor1);
+console.log(shiftedRedHexColor2);
+```
+
+Now, when you run this modified code, you will get the color-shifted hex values for shades of red corresponding to the provided blue colors.
 
 <br>
 
