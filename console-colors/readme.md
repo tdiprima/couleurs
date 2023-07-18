@@ -1,5 +1,3 @@
-### [Tutorial: Getting Creative with Console Statements](https://thenewstack.io/tutorial-getting-creative-with-console-statements/)
-
 ### [Colorful Console Message](https://www.samanthaming.com/tidbits/40-colorful-console-message/)
 
 ### [Colors in JavaScript console](https://stackoverflow.com/questions/7505623/colors-in-javascript-console)
