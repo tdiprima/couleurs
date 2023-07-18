@@ -1,11 +1,11 @@
 ## Green shades: 2 hex
 
-I need 2 hex colors, like <span style="color:#156289;font-weight:bold;">"#156289"</span> and <span style="color:#072534;font-weight:bold;">"#072534"</span>, but in green.  You know what I mean?  I'd like the same sort of hue, color, intensity but in green.
+I need 2 hex colors, like <span style="color:#156289;font-weight:bold;">"#156289" (Orient)</span> and <span style="color:#072534;font-weight:bold;">"#072534" (Daintree)</span>, but in green.  You know what I mean?  I'd like the same sort of hue, color, intensity but in green.
 
 Certainly! Here are two hex colors that are similar in hue, color, and intensity to the shades you provided, but in green:
 
-1. <span style="color:#157F4C;font-weight:bold;">"#157F4C"</span>
-2. <span style="color:#063F29;font-weight:bold;">"#063F29"</span>
+1. <span style="color:#157F4C;font-weight:bold;">"#157F4C" (Salem)</span>
+2. <span style="color:#063F29;font-weight:bold;">"#063F29" (Sherwood Green)</span>
 
 These colors maintain a similar saturation and darkness to the blue shades you mentioned, but with a green hue instead.
 
@@ -50,5 +50,6 @@ Blue: 50
 
 The modified RGB values represent a shade of red. Converting these RGB values back to a hexadecimal color code, we get "#C83232". Therefore, the color "#072534" shifted to a shade of red would be <span style="color:#C83232;font-weight:bold;">"#C83232" (Flush Mahogany)</span>
 
-<br>
+Um... it should be <span style="color:#891515;font-weight:bold;">#891515 (Old Brick)</span>
 
+<br>
