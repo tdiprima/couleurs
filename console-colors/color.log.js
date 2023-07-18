@@ -13,6 +13,14 @@ console.log("%cDarkSeaGreen", "color: darkseagreen;");
 
 console.log(String.fromCodePoint(0x1f601));
 
+
+<span style="font-size:27px;"></span>
+<span style="color:red;"></span>
+<span style="color:#0000dd;"></span>
+<span style="color:green;font-weight:bold;font-size:larger;"></span>
+Paprika "#a71f36"
+
+
 let styles = [
   'color: green',
   'background: yellow',
