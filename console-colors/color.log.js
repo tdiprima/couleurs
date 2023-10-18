@@ -1,15 +1,12 @@
 // My go-to CSS debugging colors
 console.log("%cDeepPink", "color: deeppink");
-console.log("%cGreenYellow", "color: #ccff00;");
-
 console.log("%cHotPink", "color: #ff00cc;");
-
 console.log(`%c${e.message}`, "color: #ff6a5a; font-size: larger;");
 
-console.log("%cI LIKE GRAPES!", "color: #997fff;");
-console.log("%cDark purple", "color: #410093");
+console.log("%cGreenYellow", "color: #ccff00;");
+console.log("%cLightOrange", "color: #ffb439;");
 
-console.log("%cDarkSeaGreen", "color: darkseagreen;");
+console.log("%cI LIKE GRAPES!", "color: #997fff;");
 
 console.log(String.fromCodePoint(0x1f601));
 
@@ -17,8 +14,22 @@ console.log(String.fromCodePoint(0x1f601));
 <span style="font-size:27px;"></span>
 <span style="color:red;"></span>
 <span style="color:#0000dd;"></span>
-<span style="color:green;font-weight:bold;font-size:larger;"></span>
-Paprika "#a71f36"
+
+Paprika
+<span style="color:#a71f36;"></span>
+
+Purple heart
+<span style="color:#4a00b4;"></span>
+
+<span style="color:#ffb439;font-weight:bold;font-size:larger;"></span>
+
+<span style="color:#59acf3;font-size:larger;">link</span>
+<a href="link" style="color:#59acf3;font-size:larger;">link</a>
+
+"font-style:italic;"
+
+Link
+<span style="color:#59acf3;"></span>
 
 
 let styles = [
