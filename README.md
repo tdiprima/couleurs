@@ -5,7 +5,7 @@ This repository is a collection of experiments and explorations in the world of 
 **What's inside?**
 
 * **Blending**: A collection of code snippets that demonstrate how to blend colors using different techniques.
-* **Blue-Red Gradient**: A simple example of a blue-red gradient using HTML and CSS.
+* **Blue-Red Colormap**: A simple example of a blue-red colormap.
 * **Chroma.js**: A JavaScript library for working with colors, including color conversion, interpolation, and manipulation.
 * **Color-Picker**: A simple color picker demo using HTML, CSS, and JavaScript.
 * **Image.js**: A JavaScript library for working with images, including color manipulation and processing.
