@@ -8,4 +8,3 @@
 * **Color Interpolation**: A collection of code snippets that demonstrate how to interpolate colors using different techniques.
 * **Opposite Colors**: A simple example of finding the opposite color of a given color using HTML and CSS.
 * **Console Colors**: To print to the developer console.
-* Etc.
