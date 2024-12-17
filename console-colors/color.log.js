@@ -13,7 +13,8 @@ console.log(String.fromCodePoint(0x1f601));
 
 <span style="font-size:27px;"></span>
 <span style="color:red;"></span>
-<span style="color:#0000dd;"></span>
+<span style="color:blue;"></span>
+<span style="color:blue;font-size:larger;"></span>
 
 Paprika
 <span style="color:#a71f36;"></span>
@@ -24,7 +25,7 @@ Purple heart
 <span style="color:#ffb439;font-weight:bold;font-size:larger;"></span>
 
 <span style="color:#59acf3;font-size:larger;">link</span>
-<a href="link" style="color:#59acf3;font-size:larger;">link</a>
+<a href="link" style="font-size:larger;">link</a>
 
 "font-style:italic;"
 
